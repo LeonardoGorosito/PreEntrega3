@@ -1,0 +1,59 @@
+@use 'reset';
+@use 'navbar';
+@use 'logo';
+@use 'footer';
+
+$color1: yellow;
+
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: $color1;
+    justify-content: space-between;
+    .div1{
+        margin-left: 2rem;
+        text-align: center;
+        }
+}
+
+
+article{
+    
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 33%);
+    gap: 1rem;
+    margin: 3rem 2rem;
+    }
+
+
+.sobrenosotros{
+    margin: 2.5%;
+    padding: 2.5%;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+}
+
+
+ol{
+    margin-top: 200px;
+    margin-bottom: 32%;
+    margin-left: 1rem;
+
+}
+
+
+
+@media (min-width: 768px) {
+    /* Estilos para desktops */
+    body {
+    font-size: 18px;
+    }
+    
+  }
+
+
+

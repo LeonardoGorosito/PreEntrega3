@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+}
+
+header nav {
+  justify-content: center;
+  text-align: center;
+  margin: 14px;
+}
+
+.logo {
+  justify-content: center;
+  height: 50px;
+  width: 500px;
+}
+
+footer {
+  background-color: yellow;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3vh;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: yellow;
+  justify-content: space-between;
+}
+header .div1 {
+  margin-left: 2rem;
+  text-align: center;
+}
+
+article {
+  height: 40vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 33%);
+  gap: 1rem;
+  margin: 3rem 2rem;
+}
+
+.sobrenosotros {
+  margin: 2.5%;
+  padding: 2.5%;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  text-align: center;
+}
+
+ol {
+  margin-top: 200px;
+  margin-bottom: 32%;
+  margin-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  /* Estilos para desktops */
+  body {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
