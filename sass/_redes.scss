@@ -6,13 +6,24 @@ header{
             text-decoration: none;
             text-align: center;
             margin-top: 25px;
+            justify-content: center;
         }
         img{
             
             margin-top: 1px;
         }
     }
-
 }
+
+@media (hover:hover){
+    header{
+        div{
+            a:hover{
+                color: yellow;
+            }
+        }
+    }
+}
+
 
 
