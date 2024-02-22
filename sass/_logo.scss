@@ -1,5 +1,9 @@
-.logo{
-    justify-content: center;
-    height: 50px;
-    width: 500px;
+header{
+    display: flex;
+    section{
+        justify-content: space-between;
+        img{
+            width: auto
+        }
+    }
 }

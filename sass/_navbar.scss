@@ -2,8 +2,27 @@ header{
     nav{
         justify-content: center;
         text-align: center;
-        margin: 14px;
-        
+        margin: 20px;
+        a{
+            text-decoration: none;
+            margin: 5px;
+            padding: 27px;
+            
+        }
     }
 }
+
+@media (hover:hover){
+    header{
+            .nav{
+                a:hover{
+                color:yellow;
+                background-color: black;
+            }
+        }
+    }
+}
+
+
+
 

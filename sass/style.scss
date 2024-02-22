@@ -2,6 +2,8 @@
 @use 'navbar';
 @use 'logo';
 @use 'footer';
+@use 'redes';
+
 
 $color1: yellow;
 
@@ -10,10 +12,6 @@ header{
     flex-direction: row;
     background-color: $color1;
     justify-content: space-between;
-    .div1{
-        margin-left: 2rem;
-        text-align: center;
-        }
 }
 
 
