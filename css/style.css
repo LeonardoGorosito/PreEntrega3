@@ -38,8 +38,6 @@ footer {
   background-color: yellow;
   position: relative;
   bottom: 0;
-  left: 0;
-  right: 0;
   padding: 3vh;
   text-align: center;
 }
@@ -63,11 +61,27 @@ header div a {
     color: yellow;
   }
 }
+.ayuda1 h2 {
+  margin: 1rem 1rem;
+  padding: 1rem;
+  gap: 10px;
+  text-align: center;
+}
+.ayuda1 p {
+  margin: 1rem 1rem;
+  padding: 1rem;
+}
+
+body {
+  font-family: Arial;
+}
+
 header {
   display: flex;
   background-color: yellow;
   justify-content: space-between;
   border: 3px solid #000;
+  padding: 0;
 }
 
 .main {
