@@ -7,9 +7,8 @@
     <meta name="description" content="Los mejores beneficios al comprar nuestro producto.">
     <meta name="keywords" content="Placas, placas de videp, Nvidia, RTX 4090,RTX 4080, RTX 4070, RTX, PCProductosAR, PCProductos">
 
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -18,43 +17,76 @@
         <section class="logo">
         <img src="../img/Logo_empresa_ficticia.png">
         </section>
-            
-        <nav class="nav">
-            <ul>
-                <a href="../index.html">INICIO</a>
-                <a href="./productos.html">PRODUCTOS</a>
-                <a href="./ayuda.html">AYUDA</a>
-                <a href="./beneficios.html">BENEFICIOS</a>
-                <a href="./sobrenosotros.html">SOBRE NOSOTROS</a>
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button id="cerrar" class="cerrar-menu"><i class="bi bi-x-lg"></i></button>
+            <ul class="navList">
+                <li><a href="../index.html">INICIO</a></li>
+                <li><a href="./productos.html">PRODUCTOS</a></li>
+                <li><a href="./ayuda.html">AYUDA</a></li>
+                <li><a href="./beneficios.html">BENEFICIOS</a></li>
+                <li><a href="./sobrenosotros.html">SOBRE NOSOTROS</a></li>
             </ul>
         </nav>
-            
-        <div class="div1"><img src="../img/facebook_icon.svg"><a href="https://www.facebook.com">ProductosPCAE</a></div>
-        <div class="div2"><img src="../img/INSTAGRAM_ICONO.svg"><a href="https://www.instagram.com">Productos_PCAR</a></div>
-        <div class="div3"><img src="../img/icons8-whatsapp.svg"><a href="https://web.whatsapp.com">Contactanos</a></div>
-
+        <section class="redes">
+        <ul><div class="div1"><img src="../img/facebook_icon.svg"><a href="https://www.facebook.com">ProductosPCAE</a></div></ul>
+        <ul><div class="div2"><img src="../img/INSTAGRAM_ICONO.svg"><a href="https://www.instagram.com">Productos_PCAR</a></div></ul>
+        <ul><div class="div3"><img src="../img/icons8-whatsapp.svg"><a href="https://web.whatsapp.com">Contactanos</a></div></ul>
+    </section>
 </header>
 
 
 
-    <SECTION class="BENEFICIOS">
+<!--    <SECTION class="BENEFICIOS">
         <img src="../img/Mail-en-Mac-OS-NUTHOST.png" alt="MacOS"width="250" height=auto>
         <button>VER BENEFICIOS</button>
         <img src="../img/pccomponentes-1024x576.png" alt="pccomponentes"width="250" height="auto">
         <button>VER BENEFICIOS</button>
-    </SECTION>
+        </SECTION>
+    -->
+<main class="beneficios">
+    
+    <div class="card">
+        <img src="../img/pccomponentes-1024x576.png" class="card-img-top" alt="PCComponentes">
+        <div class="card-body">
+          <h5 class="card-title">PCComponentes</h5>
+          <p class="card-text">Si sos residente en españa aprovecha esta fabulosa oferta!</p>
+          <a href="#" class="btn btn-primary">BENEFICIOS</a>
+        </div>
+      </div>
+    
+    
+    
+      <div class="card">
+        <img src="../img/Mail-en-Mac-OS-NUTHOST.png" class="card-img-top" alt="Apple">
+        <div class="card-body">
+          <h5 class="card-title">MacOS</h5>
+          <p class="card-text">Aprovecha un <strong>10%</strong> de descuento con la compra de unos de nuestro productos en macOS</p>
+          <a href="#" class="btn btn-primary">BENEFICIOS</a>
+        </div>
+      </div>
+    
 
+     
+      <div class="card">
+        <img src="../img/NVIDIA.jpg" class="card-img-top" alt="NVIDIA">
+        <div class="card-body">
+          <h5 class="card-title">NVidia</h5>
+          <p class="card-text">Aprovecha un descuento de un <str>25%!</str>, solo con la compra de unos de nuestros prodctos</p>
+          <a href="#" class="btn btn-primary">BENEFICIOS</a>
+        </div>
+      </div>
+    
+</main>
 
 
     <footer class="footer">
         <div class="container">
-    
         <p class="copyright">© Todos los derechos reservados 2023 Productos ProductsPCAR</p>
         </div>
-    
-        </footer>
+    </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min js"integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+        <script src="../js/main.js"></script>
 </body>
 </html>

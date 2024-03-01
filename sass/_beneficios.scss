@@ -1,0 +1,20 @@
+.beneficios{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr;
+    gap: 10rem;
+    margin: 5rem;
+    
+    .card-body{
+        text-align: center;
+        a{
+            background-color: yellow;
+            color: black;
+        }
+    }
+
+}
+
+
+
+

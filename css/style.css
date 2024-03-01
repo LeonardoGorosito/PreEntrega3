@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 * {
   margin: 0;
   padding: 0;
@@ -9,18 +10,17 @@ body {
 }
 
 header nav {
-  justify-content: center;
-  text-align: center;
-  margin: 0;
-  background-color: yellow;
+  background-color: header nav color1;
 }
-header nav ul a {
+header nav .navList {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+}
+header nav .navList li a {
   text-decoration: none;
-  justify-content: center;
-  text-align: center;
-  margin-top: 1rem;
-  padding: 2rem;
   color: black;
+  padding: 1.5rem;
 }
 
 @media (hover: hover) {
@@ -37,18 +37,12 @@ footer {
   text-align: center;
 }
 
-header {
+header .redes div {
   justify-content: center;
   align-items: center;
 }
-header div {
-  justify-content: center;
-  align-items: center;
-}
-header div a {
+header .redes div a {
   text-decoration: none;
-  justify-content: center;
-  align-items: center;
   color: black;
 }
 
@@ -56,6 +50,9 @@ header div a {
   header div a:hover {
     color: yellow;
   }
+}
+.ayuda1 button {
+  background-color: yellow;
 }
 .ayuda1 h2 {
   margin: 0;
@@ -70,23 +67,38 @@ header div a {
   text-align: start;
 }
 
-header section img {
-  max-width: 50rem;
-  margin: 0;
+header .logo img {
+  max-width: 30rem;
+  margin-bottom: 1rem;
 }
 
-body {
-  font-family: Arial;
+.beneficios {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10rem;
+  margin: 5rem;
+}
+.beneficios .card-body {
+  text-align: center;
+}
+.beneficios .card-body a {
+  background-color: yellow;
+  color: black;
 }
 
 header {
   display: flex;
   background-color: yellow;
+  align-items: center;
   justify-content: space-between;
   border: 3px solid #000;
-  padding: 0;
+  padding: 1rem;
 }
 header .abrir-menu {
+  display: none;
+}
+header .cerrar-menu {
   display: none;
 }
 
@@ -119,31 +131,50 @@ ol {
   margin-left: 1rem;
 }
 
-@media screen and (max-width: 800px) {
-  header .abrir-menu {
+@media screen and (max-width: 968px) {
+  header .abrir-menu,
+  header .cerrar-menu {
     display: block;
-  }
-  header .div1, header .div2, header .div3 {
-    display: none;
+    border: 0;
+    font-size: 1.8rem;
+    background-color: yellow;
   }
   header .nav {
+    opacity: 0;
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     align-items: end;
-    gap: 2rem;
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
+    gap: 1rem;
     background-color: yellow;
+    bottom: 0;
     padding: 2rem;
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
   }
-  header .nav a {
+  header .nav .navList {
+    flex-direction: column;
     align-items: end;
   }
   header .logo img {
-    max-width: 10rem;
+    max-width: 30rem;
+    padding: 0;
+    margin: 0;
+  }
+  header .redes {
+    display: none;
+  }
+  header .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .beneficios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "1" "1" "2" "3";
+    gap: 0.5rem;
   }
 }
 
