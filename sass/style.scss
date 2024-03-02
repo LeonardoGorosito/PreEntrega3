@@ -75,6 +75,7 @@ main div img{
     }
     
     header{
+        z-index: 100;
         
         .abrir-menu ,
         .cerrar-menu{
@@ -156,6 +157,7 @@ main div img{
         margin: 5%;
     }
     header{
+        z-index: 100;
         .logo{
             img{
                 width: 90%;
