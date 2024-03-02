@@ -5,6 +5,8 @@
 @use 'ayuda';
 @use 'logo';
 @use 'beneficios';
+@use 'productos';
+@use 'sobrenosotros';
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 
@@ -31,50 +33,49 @@ header{
 
 .main{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3,25%);
-    gap: 5rem;
-    margin: 4rem 4rem;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas: 
+    "leo1 leo1"
+    "leo2 leo3"
+    ;
+    gap: 1rem;
+    margin: 5rem;
 }
 
+
+
 main div img{
+
     width: 100%;
     height: 100%;
     object-fit: cover;
     }
 
+    .EJEMPLO1{
+            grid-area: leo1;
+        }
+        .EJEMPLO2{
+            grid-area: leo2;
+        }
+        .EJEMPLO3{
+            grid-area: leo3;
+        }
 
-.sobrenosotros{
-    margin: 2.5%;
-    padding: 2.5%;
-    width: auto;
-    height: auto;
-    display: inline-block;
-    text-align: center;
-}
-
-
-ol{
-    margin-top: 200px;
-    margin-bottom: 32%;
-    margin-left: 1rem;
-
-}
-
-
-//@media screen and (max-width:900px){
-//    header{
-//        .logo{
-//            max-width: 1rem;
-//            @import url(./_reset.scss);
-//
-//        }
-//    }
-//}
 
 @media screen and (max-width:968px) {
+    .main{
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "leo1 leo2"
+        "leo3 leo3"
+        ;
+        margin: 10%;
+    }
     
     header{
+        
         .abrir-menu ,
         .cerrar-menu{
             display: block;
@@ -82,7 +83,14 @@ ol{
             font-size: 1.8rem;
             background-color: $color1;
         }
-        
+
+        .containerItems{
+            display: grid;
+            padding: 1rem;
+            gap: 1rem;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 0.2fr;
+            }
         .nav{
             opacity: 0;
             visibility: hidden;
@@ -93,53 +101,89 @@ ol{
             top: 0;
             right: 0;
             gap: 1rem;
-            background-color: $color1;
+            background-color: $color1 ;
             bottom: 0;
             padding: 2rem;
-
             
             .navList{
                 flex-direction: column;
                 align-items: end;
+
             }
-            
         }
         .logo{
             img{
-                max-width: 30rem;
+                max-width: 100rem;
                 padding: 0;
                 margin: 0;
                 }
-            }
+        
+    }
         .redes{
             display: none;
         }
         
         .nav.visible{
-            opacity: 1;
+            opacity: 1 !important;
             visibility: visible;
         }
     }
     .beneficios{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-            "1" "1"
-            "2" "3"
-            ;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 2fr ;
         gap: 0.5rem;
+        }
+ }
 
-      
-        
+ @media screen and (max-width:500px) {
+    .containerItems{
+        display: grid;
+        padding: 1rem;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        }
+    .main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "leo1"
+        "leo2"
+        "leo3"
+        ;
+        margin: 5%;
     }
-    
+    header{
+        .logo{
+            img{
+                width: 90%;
+                height: auto;
+                margin: 0;
+                padding: 0;
+            }
+        
+        }
+    }
+
+
+    .beneficios{
+        
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr ;
+        gap: 0.3rem;
+    }
+
+    .sobrenosotros{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        img{
+            width: 80%;
+        }
+    }
 }
-
-
-
-
-
-
 
 

@@ -68,7 +68,7 @@ header .redes div a {
 }
 
 header .logo img {
-  max-width: 30rem;
+  max-width: 100vh;
   margin-bottom: 1rem;
 }
 
@@ -85,6 +85,69 @@ header .logo img {
 .beneficios .card-body a {
   background-color: yellow;
   color: black;
+}
+
+.containerItems {
+  display: grid;
+  padding: 1rem;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 0.2fr;
+}
+.containerItems img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: all 0.4s;
+}
+.containerItems .item {
+  border-radius: 5px;
+}
+.containerItems .item figure {
+  overflow: hidden;
+}
+.containerItems .infoProducto {
+  margin: 20px;
+  padding: 10px 15px;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.precio {
+  font-size: 18px;
+  font-weight: 800;
+  border: none;
+  background: none;
+  background-color: yellow;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+.precio a {
+  text-decoration: none;
+  color: black;
+}
+
+.item:hover {
+  box-shadow: 0 5px 10px rgb(82, 100, 4);
+}
+.item:hover img {
+  transform: scale(1.2);
+}
+
+.sobrenosotros {
+  text-align: center;
+  margin: 20px;
+}
+.sobrenosotros h2 {
+  gap: 3rem;
+  margin: 10px;
+}
+.sobrenosotros img {
+  width: 500px;
+  height: 100%;
+  margin: 10px;
 }
 
 header {
@@ -104,10 +167,11 @@ header .cerrar-menu {
 
 .main {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 25%);
-  gap: 5rem;
-  margin: 4rem 4rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "leo1 leo1" "leo2 leo3";
+  gap: 1rem;
+  margin: 5rem;
 }
 
 main div img {
@@ -116,28 +180,38 @@ main div img {
   object-fit: cover;
 }
 
-.sobrenosotros {
-  margin: 2.5%;
-  padding: 2.5%;
-  width: auto;
-  height: auto;
-  display: inline-block;
-  text-align: center;
+.EJEMPLO1 {
+  grid-area: leo1;
 }
 
-ol {
-  margin-top: 200px;
-  margin-bottom: 32%;
-  margin-left: 1rem;
+.EJEMPLO2 {
+  grid-area: leo2;
+}
+
+.EJEMPLO3 {
+  grid-area: leo3;
 }
 
 @media screen and (max-width: 968px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "leo1 leo2" "leo3 leo3";
+    margin: 10%;
+  }
   header .abrir-menu,
   header .cerrar-menu {
     display: block;
     border: 0;
     font-size: 1.8rem;
     background-color: yellow;
+  }
+  header .containerItems {
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 0.2fr;
   }
   header .nav {
     opacity: 0;
@@ -158,7 +232,7 @@ ol {
     align-items: end;
   }
   header .logo img {
-    max-width: 30rem;
+    max-width: 100rem;
     padding: 0;
     margin: 0;
   }
@@ -166,15 +240,50 @@ ol {
     display: none;
   }
   header .nav.visible {
-    opacity: 1;
+    opacity: 1 !important;
     visibility: visible;
   }
   .beneficios {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "1" "1" "2" "3";
+    grid-template-rows: 2fr;
     gap: 0.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .containerItems {
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "leo1" "leo2" "leo3";
+    margin: 5%;
+  }
+  header .logo img {
+    width: 90%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .beneficios {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0.3rem;
+  }
+  .sobrenosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .sobrenosotros img {
+    width: 80%;
   }
 }
 
