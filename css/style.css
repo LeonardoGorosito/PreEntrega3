@@ -9,9 +9,6 @@ body {
   font-family: Arial;
 }
 
-header nav {
-  background-color: header nav color1;
-}
 header nav .navList {
   display: flex;
   list-style-type: none;
@@ -201,10 +198,10 @@ main div img {
   }
   header .abrir-menu,
   header .cerrar-menu {
-    display: block;
-    border: 0;
-    font-size: 1.8rem;
-    background-color: yellow;
+    display: block !important;
+    border: 0 !important;
+    font-size: 1.8rem !important;
+    background-color: yellow !important;
   }
   header .containerItems {
     display: grid;
@@ -214,16 +211,17 @@ main div img {
     grid-template-rows: 1fr 0.2fr;
   }
   header .nav {
+    z-index: 100;
     opacity: 0;
     visibility: hidden;
     display: flex;
     flex-direction: column;
     align-items: end;
-    position: absolute;
+    position: absolute !important;
     top: 0;
     right: 0;
     gap: 1rem;
-    background-color: yellow;
+    background-color: yellow !important;
     bottom: 0;
     padding: 2rem;
   }
